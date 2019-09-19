@@ -1,25 +1,41 @@
 <!-- templates/index.html -->
+{% extends 'base.html' %}{% block title %} Gif Gif {% endblock %} {% block content %}
+<nav>
+    <div>
+        <h1>Search for Gif</h1>
+    </div>
+    <div class="form_containter">
+        <form action="/">
+            <p>
+                <input class="typehead" type="text" name="search" placeholder="Search..."/>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </p>
+            <p>{{gifs_recieved}}</p>
+        </form>
+        <form>
+            <button type="submit" name="button" value="trending" class="btn btn-primary">
+                Trending Gifs
+            </button>
+        </form>
+    </div>
+</nav>
 
-
+<!-- {% if gifs %} 
+    {% for gif in gifs %} 
+<div class="gif_container">{% include 'gif.html' %}</div>
+    {% endfor %}
+ {% else %}
+<h1>ERROR</h1>
+<p> 
+    This gif does not exist, please try again
+</p>
+{% endif %} {% endblock %} -->
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
-    <form action='/compliment'>
-        <p>
-            Search
-            <input type="text" search="search"/>
-            <button type="submit">Submit</button> <br>
-        </p>
-        <!-- <p>
-            <input type="checkbox" name="show_compliments"/>
-            Show Compliments
-        </p>
-        <p>
-            How many compliments? -->
 
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
-<!-- test -->

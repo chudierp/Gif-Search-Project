@@ -4,6 +4,8 @@ import json
 
 app = Flask(__name__)
 
+
+
 @app.route('/')
 def index():
     """Return homepage."""
@@ -29,14 +31,14 @@ def index():
     # https://tenor.com/gifapi/documentation
    
 
-    if button == "trending":
-        params["q"] = "trending"
-        r = requests.get("https://api.tenor.com/v1/trending?", params)
-
+    if r.status_code == 200:
+        gifs = json.loads(r.content)
+    else:
+        gifs = None
     # TODO: Use the '.json()' function to get the JSON of the returned response
     # object
     
-    gifs = json.loads(r.content)['results']
+    gifs_recieved = json.loads(r.content)['results']
     
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
@@ -45,7 +47,7 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html", gifs=gifs)
+    return render_template("index.html", gifs_recieved=gifs)
 
 if __name__ == '__main__':
     app.run(debug=True)

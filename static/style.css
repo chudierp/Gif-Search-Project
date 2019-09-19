@@ -1,0 +1,28 @@
+body {
+    color: aliceblue;
+    font-size: 200%;
+    font-family: verdana;
+    text-align: center; 
+    background-color: #0CAEFE;
+}
+nav {
+    background-color: #0CAEFE;
+}
+.btn-primary {
+    color: #0CAEFE;
+    background-color: white; 
+    border-color: black;
+    margin: 0 0.4em;
+}
+
+.tenor-gif-embed {
+    max-width: 32vw;
+    padding: 0;
+    margin: 0;
+}
+.gif_container {
+    background-color: blue;
+    border: 2px solid green;
+    width: fit-content;
+    display: inline-flex;
+}
