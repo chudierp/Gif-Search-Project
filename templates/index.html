@@ -6,6 +6,14 @@
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
+@app.route('/')
+def index():
+    """Show the homepage and ask the user's name."""
+    return """
+    <form action='/compliment'>
+        What is your name?
+        <input type="text" name="name"></input>
+        <button type="submit">Submit</button> <br>
 
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
