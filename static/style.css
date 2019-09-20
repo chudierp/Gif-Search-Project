@@ -1,15 +1,15 @@
 body {
-    color: aliceblue;
+    color: greenyellow;
     font-size: 200%;
     font-family: verdana;
     text-align: center; 
-    background-color: #0CAEFE;
+    background-color: rgba(175, 187, 13, 0.794);
 }
 nav {
-    background-color: #0CAEFE;
+    background-color: rgb(247, 130, 4);
 }
 .btn-primary {
-    color: #0CAEFE;
+    color: rgb(0, 0, 0);
     background-color: white; 
     border-color: black;
     margin: 0 0.4em;

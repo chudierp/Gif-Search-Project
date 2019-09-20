@@ -1,27 +1,30 @@
 <!-- templates/index.html -->
-<!Doctype html>
 
-<html>
 
-<head>
-    <title> Gift Page </title>
-</head>
 
-<body>
+<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
+{% extends 'base.html' %}
 
-        <h1>Search for Gif</h1>
-   
+{% block title %} Gif Gif {% endblock %} 
+
+{% block content %}
+    <!-- TODO: Make an HTML form containing a search box and a submit button to add
+        the search term to the query string. The form should have a target of '/' to
+        send us to the same route. -->
         <form action="/">
-           
-                <input class="typehead" type="text" name="search" placeholder="Search..."/>
-                <button type="submit" name="button" class="btn btn-primary">Search</button>
-          
-            
+            <p>
+                <input class="typehead" type="text" name="search" placeholder="Search Gifs.."/>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </p>
         </form>
 
-        <p>{{ gif_list }}</p>
-       
+    <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
+    {% for gif in gifs_recieved %} 
+        <div class="gif_container">
+            <!-- TODO: For each gif, include the 'gif.html' template to display it -->
+            {% include 'gif.html' %}
+        </div>
+    {% endfor %}
 
-</body>
 
-</html>
+{% endblock %}
