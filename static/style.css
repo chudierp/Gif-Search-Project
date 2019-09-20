@@ -1,9 +1,9 @@
 body {
-    color: greenyellow;
+    color: black;
     font-size: 200%;
     font-family: verdana;
     text-align: center;
-    background-color: rgba(175, 187, 13, 0.794);
+    background-color: rgb(207, 185, 151);
 }
 
 nav {
